@@ -1,6 +1,5 @@
 
 import java.lang.*;
-import java.lang.invoke.SwitchPoint;
 import java.util.*;
 
 // Runnable is a Task and thread is a worker
@@ -23,7 +22,9 @@ public class runnableThread implements Runnable {
 }
 
 class runThread{
+
     public static void main(String[] args){
+
         List<Thread> threads = new ArrayList<>();
 
         for(int i = 0; i < 2; i++){
@@ -46,7 +47,7 @@ class runThread{
             threads.add(worker); // keeping threads info in List
         }
 
-        int running;
+        int running = 0;
         do{
             running = 0;
             for(Thread t : threads){
